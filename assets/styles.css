@@ -1,6 +1,12 @@
 /**
 *CSS rules my App
 **/
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+
+>>>>>>> devel
 body{
     background-color: beige
 }
@@ -10,4 +16,20 @@ body{
 
 [myApp] h2:hover{
     color: rgb(157, 165, 240)
+<<<<<<< HEAD
 }
+=======
+}
+  /* Couleur du background des societe lorsquon clique dessus*/
+  .selected{
+    background-color: darkcyan;
+}
+
+.company ul {
+    display: none;
+}
+
+.counter{
+    color: blueviolet;
+}
+>>>>>>> devel
