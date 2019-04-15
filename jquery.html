@@ -36,9 +36,11 @@
             //const monH1 = document.querySelector('h1');
             //monH1.innerHTML = 'Hello jQuery natif JS';
 
-            $('.company').on(
+            $('.company').on( //.company fait appel a tous les class qui on ce nom
                 "click",
-                (event) => { alert('tu as clique sur moi!'); }//call back fct
+                function(ev) { 
+                    $(this).css('background-color', 'lightblue');
+                }//call back fct in native js for "ev" = qui quoi quel 
             );
         </script>
     </body>
