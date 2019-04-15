@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello jQuery !</title>
+
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <heard>
+            <h1></h1>
+        </header>
+
+        <main>
+            <div class = "company">
+                <h2>Aélion</h2>
+                <address>
+                    <p>95 Chemin de Gabardie</p>
+                    <p><span class="zipcode">31000</span>&nbsp<span>Toulouse</span>
+                </address>
+            </div>
+
+           <div class = "company">
+                <h2>Cap Gemini</h2>
+                <address>
+                    <p>109 Avenue du Général Eisenhower</p>
+                    <p><span class="zipcode">31000</span>&nbsp<span>Toulouse</span>
+                </address>
+            </div>
+
+        <script>
+            $('h1').html("hellojQuerry");
+
+            //const monH1 = document.querySelector('h1');
+            //monH1.innerHTML = 'Hello jQuery natif JS';
+
+            //Deactivate previous click
+            $('.company').on( //.company fait appel a tous les class qui on ce nom
+                "click",
+                function(ev) { 
+                    $(this).css('background-color', 'lightblue');
+                    $(this).prev().css('background-color','')
+                }//call back fct in native js for "ev" = qui quoi quel 
+            );
+        </script>
+    </body>

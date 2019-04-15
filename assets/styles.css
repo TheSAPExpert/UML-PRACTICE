@@ -1,0 +1,13 @@
+/**
+*CSS rules my App
+**/
+body{
+    background-color: beige
+}
+[myApp] h2 {
+    color: rgb(44, 0, 204)
+}
+
+[myApp] h2:hover{
+    color: rgb(157, 165, 240)
+}
