@@ -1,6 +1,5 @@
 import { CompanyModel } from "./models/company.model";
 import { ToHtml } from "./utils/to-html";
-
 /**
  * @name main
  * @desc Point d'entrée dans l'application
@@ -39,3 +38,11 @@ const x = new ToHtml();
 x.toPage(aelion);
 x.toPage(capgem);
 
+//Ecouter le clic dans le document
+const clickDetection: any = document.querySelectorAll('.click'); //".click fait reference a tous les elements qui porte la classe "click"
+clickDetection.addEventListener( //Gestion des evenement "document.addEventListener"
+    'click',
+    () => {  //""=>"" veut dire associe moi a cette fonction "()" ca "{}""
+        alert('Merci CC!!!!!!!!')
+    }
+);
