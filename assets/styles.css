@@ -1,6 +1,9 @@
 /**
 *CSS rules my App
 **/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+
 body{
     background-color: beige
 }
@@ -18,4 +21,8 @@ body{
 
 .company ul {
     display: none;
+}
+
+.counter{
+    color: blueviolet;
 }

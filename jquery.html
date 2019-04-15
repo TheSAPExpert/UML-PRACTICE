@@ -127,7 +127,11 @@
 
                     //#3 Ajouter 1 a la valeur courante
                     let nextValue = parseInt(value.html());
-                    nextValue = nextValue -1;
+                    if(nextValue > 0 ){
+                        nextValue = nextValue -1;
+                    } else {
+                        nextValue = 0
+                    }
                     console.log('Apres incrementation la valeur devient :' + nextValue);
 
                     //#4 Remplacer la nouvelle valeur sur le html
@@ -137,4 +141,3 @@
         </script>
     </body>
 </html>
-
