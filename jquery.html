@@ -21,12 +21,36 @@
         </header>
 
         <main>
+            <!-- Un compteur[+/-] On pose le decor ! -->
+            <div class="counter">
+                <!-- Pour decrementer la valeur -->
+                <span class="down">
+                    -
+                </span>
+
+                <!-- La valeur elle-meme -->
+                <span classe="valeur">0</span>
+
+                <!-- Pour incrimenter la valeur -->
+                <span class="up">
+                    +
+                </span>
+            </div>
+            <!-- Fin du decor -->
+            
             <div class = "company">
                 <h2>Aélion</h2>
                 <address>
                     <p>95 Chemin de Gabardie</p>
                     <p><span class="zipcode">31000</span>&nbsp<span>Toulouse</span>
                 </address>
+                <ul>
+                    <li> M. Pascal </li>
+                    <li> M. Bean </li>
+                    <li> M. Jean-Pierre </li>
+                    <li> M. Machine </li>
+                    <li> M. TheBest </li>
+                </ul>
             </div>
 
            <div class = "company">
@@ -35,8 +59,14 @@
                     <p>109 Avenue du Général Eisenhower</p>
                     <p><span class="zipcode">31000</span>&nbsp<span>Toulouse</span>
                 </address>
+                <ul>
+                    <li> M. MM </li>
+                    <li> M. CC</li>
+                    <li> M. KK </li>
+                    <li> M. JJ </li>
+                    <li> M. KAT </li>
+                </ul>
             </div>
-
         <script>
             $('h1').html("hellojQuerry");
 
@@ -47,18 +77,28 @@
             $('.company').on( //.company fait appel a tous les class qui on ce nom
                 "click",
                 function(event) { 
-                    const theOne = $(this);//lobjet clique
-                    let removeClass = true;// Par defaut, jestime quil faut retirer la classe
-                    if(!theOne.hasClass('selected')){
+                    const theOne = $(this);//l'objet clique
+                    let removeClass = true;// Par defaut, j'estime qu'il faut retirer la classe
+                    
+                    if(theOne.hasClass('selected')){
                         removeClass = false;
+                        $(this).children('ul').hide();
                     }
+
                     //Supprime pour tout le monde la classe .selected
                     $('.company').removeClass('selected');
+                    $('.company ul').hide();
+                    
 
                     //Appliqur sur lelement ce qui doit etre fait
-                    if(!removeClass){
-                        $(this).toggleClass('selected');
+                    if(removeClass){
+                        $(this).addClass('selected');
+                        $(this).children('ul').show();
+                    }else{
+                        $(this).removeClass('selected');
+                        $(this).children('ul').hide();
                     }
+                    
                     //dans tous les cas... on enleve la class selected..
                     //$(this).scss('background-color', 'lightblue');
                     //$(this).css('background-color', ''); 

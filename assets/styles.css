@@ -15,3 +15,7 @@ body{
   .selected{
     background-color: darkcyan;
 }
+
+.company ul {
+    display: none;
+}
