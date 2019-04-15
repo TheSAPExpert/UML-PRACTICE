@@ -6,6 +6,13 @@
 
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 
+        <link
+            href ="./assets/styles.css"
+            rel="stylesheet"
+        >
+
+
+
     </head>
 
     <body>
@@ -39,10 +46,25 @@
             //Deactivate previous click
             $('.company').on( //.company fait appel a tous les class qui on ce nom
                 "click",
-                function(ev) { 
-                    $(this).css('background-color', 'lightblue');
-                    $(this).prev().css('background-color','')
+                function(event) { 
+                    const theOne = $(this);//lobjet clique
+                    let removeClass = true;// Par defaut, jestime quil faut retirer la classe
+                    if(!theOne.hasClass('selected')){
+                        removeClass = false;
+                    }
+                    //Supprime pour tout le monde la classe .selected
+                    $('.company').removeClass('selected');
+
+                    //Appliqur sur lelement ce qui doit etre fait
+                    if(!removeClass){
+                        $(this).toggleClass('selected');
+                    }
+                    //dans tous les cas... on enleve la class selected..
+                    //$(this).scss('background-color', 'lightblue');
+                    //$(this).css('background-color', ''); 
+
                 }//call back fct in native js for "ev" = qui quoi quel 
             );
         </script>
     </body>
+</html>

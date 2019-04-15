@@ -11,3 +11,7 @@ body{
 [myApp] h2:hover{
     color: rgb(157, 165, 240)
 }
+  /* Couleur du background des societe lorsquon clique dessus*/
+  .selected{
+    background-color: darkcyan;
+}
