@@ -105,32 +105,32 @@
             $('.up').on(
                 "click", function(event){
                     console.info("Click sur + détecté!");
-                    //objet qui contient la valeur a incrementer
+                    //#1,2 :objet qui contient la valeur a incrementer
                     const value = $('.value');
                     console.log('Valeur courante de span class==value:' + value.html());
 
-                    //Ajouter 1 a la valeur courante
+                    //#3 Ajouter 1 a la valeur courante
                     let nextValue = parseInt(value.html());
                     nextValue = nextValue +1;
                     console.log('Apres incrementation la valeur devient :' + nextValue);
 
-                    //Remplacer la nouvelle valeur sur le html
+                    //#4 Remplacer la nouvelle valeur sur le html
                     value.html(nextValue);
                 }
             );
             $('.down').on(
                 "click", function(event){
                     console.info("Click sur + détecté!");
-                    //objet qui contient la valeur a incrementer
+                    //#1,2 objet qui contient la valeur a incrementer
                     const value = $('.value');
                     console.log('Valeur courante de span class==value:' + value.html());
 
-                    //Ajouter 1 a la valeur courante
+                    //#3 Ajouter 1 a la valeur courante
                     let nextValue = parseInt(value.html());
                     nextValue = nextValue -1;
                     console.log('Apres incrementation la valeur devient :' + nextValue);
 
-                    //Remplacer la nouvelle valeur sur le html
+                    //#4 Remplacer la nouvelle valeur sur le html
                     value.html(nextValue);
                 }
             );
