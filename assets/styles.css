@@ -1,12 +1,6 @@
 /**
 *CSS rules my App
 **/
-<<<<<<< HEAD
-=======
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-
-
->>>>>>> devel
 body{
     background-color: beige
 }
@@ -16,9 +10,6 @@ body{
 
 [myApp] h2:hover{
     color: rgb(157, 165, 240)
-<<<<<<< HEAD
-}
-=======
 }
   /* Couleur du background des societe lorsquon clique dessus*/
   .selected{
@@ -31,5 +22,20 @@ body{
 
 .counter{
     color: blueviolet;
+    display: grid;
+    grid-template-columns: 80px 200px auto 40px;
+
+
 }
->>>>>>> devel
+.form-control{
+    text-align:center;
+}
+
+.btn-outline-button{
+    background-color: darkgray 
+}
+
+.alert{
+    display: none
+}
+

@@ -1,0 +1,53 @@
+<!docctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta charset="viewport" content="width=device-width,user-scalable=no">
+        <title>Mon composant</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href ="./assets/styles.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- Composant counter : Presentation -->
+        <div class="input-group mb-3">
+        
+            <!-- Bouton avant la zone de saisi -->
+            <div class="input-group-prepend">
+                <button class="btn-outline-button" type="button" id="button-decrease">-</button>
+            </div>
+            
+            <!--Zone de saissie : attribut data-max custom-->
+                <input type="text" 
+                    class="form-control" 
+                    placeholder="Veuillez saisir une quantité" 
+                    value='1' 
+                    data-max='10'
+                    data-min='1'
+                    id='quantity' 
+                    readonly
+                >
+            
+            <!-- Bouton apres la zone de saisi-->
+            <div class="input-group-append">
+                <button class="btn-outline-button" type="button" id="button-increase">+</button>
+            </div>
+            
+            <!-- Popup message-->
+        </div>
+            <div class="alert alert-danger" role="alert">
+            <strong>Holy guacamole!</strong> <span class='message'></span>
+            </div>
+        </div>
+    
+        <!-- Integration des ressources javascript// On le met a la fin pour assurer que la page ce charge lineairmenet sans bug --> 
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./assets/my-counter.js"></script>
+    </body>
+
+</html>
+
+
+
