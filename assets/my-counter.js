@@ -21,12 +21,15 @@ $('#button-increase').on(
             let newVal = parseInt(inputField.val()) + 1;
             //Afficher la nouvelle valeur
             inputField.val(newVal);
+            $('#button-decrease').removeAttr('disabled');
+            $('[role="alert"]').hide();
         }
         if (inputField.val() == maxVal) {
             //Afficher le message maxi atteint
-            alert("10 est le maximum possible!");
             const deactivate = $('#button-increase');
             $('#button-increase').attr('disabled', 'disabled');
+            $('[role="alert"] span.message').html('Vous avez atteint la valeur maximale! ');//all tags that have alert
+            $('[role="alert"]').show();
         }
     }
 );
@@ -47,12 +50,15 @@ $('#button-decrease').on(
             let newVal = parseInt(inputField.val()) - 1;
             //Afficher la nouvelle valeur
             inputField.val(newVal);
+            $('#button-increase').removeAttr('disabled');
+            $('[role="alert"]').hide();
         }
         if (inputField.val() == minVal) {
             //Afficher le message mini atteint
-            alert("1 est le min possible!");
             const deactivate = $('#button-decrease');
             $('#button-decrease').attr('disabled', 'disabled'); //affect an attribute and disable it
+            $('[role="alert"] span.message').html('Vous avez atteint la valeur minimale! ');
+            $('[role="alert"]').show();
         }
     }
 );

@@ -13,31 +13,42 @@
         <!-- Composant counter : Presentation -->
         <div class="input-group mb-3">
         
-        <!-- Bouton avant la zone de saisi -->
-        <div class="input-group-prepend">
-            <button class="btn-outline-button" type="button" id="button-decrease">-</button>
-        </div>
-        
-        <!--Zone de saissie : attribut data-max custom-->
-            <input type="text" 
-                   class="form-control" 
-                   placeholder="Veuillez saisir une quantité" 
-                   value='1' 
-                   data-max='10'
-                   data-min='1'
-                   id='quantity' 
-                   readonly
-            >
-        
-        <!-- Bouton apres la zone de saisi-->
-        <div class="input-group-append">
-            <button class="btn-outline-button" type="button" id="button-increase">+</button>
+            <!-- Bouton avant la zone de saisi -->
+            <div class="input-group-prepend">
+                <button class="btn-outline-button" type="button" id="button-decrease">-</button>
+            </div>
+            
+            <!--Zone de saissie : attribut data-max custom-->
+                <input type="text" 
+                    class="form-control" 
+                    placeholder="Veuillez saisir une quantité" 
+                    value='1' 
+                    data-max='10'
+                    data-min='1'
+                    id='quantity' 
+                    readonly
+                >
+            
+            <!-- Bouton apres la zone de saisi-->
+            <div class="input-group-append">
+                <button class="btn-outline-button" type="button" id="button-increase">+</button>
+            </div>
         </div>
 
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> <span class='message'></span>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;
+            </span>
+            </button>
+        </div>
+    
         <!-- Integration des ressources javascript// On le met a la fin pour assurer que la page ce charge lineairmenet sans bug --> 
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="./assets/my-counter.js"></script>
     </body>
+
 </html>
 
 
