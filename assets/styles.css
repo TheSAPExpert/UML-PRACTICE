@@ -35,8 +35,8 @@ body{
     text-align:center;
 }
 
-.btn btn-outline-button{
-    color: blue 
+.btn-outline-button{
+    background-color: darkgray 
 }
 
 
