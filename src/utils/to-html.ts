@@ -7,4 +7,8 @@ export class ToHtml {
         content += object.toString();
         htmlPlaceHolder.html(content);
     }
+    public appendToPage(object: JQuery): void {
+        const placeholder: JQuery = $('[' + ToHtml.placeholder + ']');
+        object.appendTo(placeholder);
+    }
 }
