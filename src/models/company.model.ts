@@ -1,11 +1,17 @@
 export class CompanyModel {    // export in javascript allows it to be imported in other file
     //#Attributes ////// ALWAYS NAME THEM STARTING WITH LOWER CASE
+    private id: number;
     private name: string;
     private address: string;
     private postalcode: string;
     private city: string;
 
     //#Methodes :
+    public setId(value: number) {
+        if (this.id === null) {
+            this.id = value;
+        }
+    }
     //Set the xxxx of the company to:...
     public setName(value: string) { //(value:......)=parametre/ set the name of the company
         this.name = value; //"#This. = reference de linstance courante de la classe"
