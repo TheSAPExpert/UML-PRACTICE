@@ -34,7 +34,8 @@ body{
 .btn-outline-button{
     background-color: darkgray 
 }
-.input-group-prepend{
+
+.input-group{
     background-color: darkgray  
 }
 

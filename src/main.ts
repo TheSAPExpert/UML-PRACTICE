@@ -8,7 +8,7 @@ import { ToHtml } from "./utils/to-html";
  */
 
 //Create an instance/objet "aelion" of class CompanyModel as a new companyModel class with attributes set to...
-const aelion: CompanyModel = new CompanyModel();//instance=objet dune classe
+const aelion: CompanyModel = new CompanyModel(2);//instance=objet dune classe
 aelion.setId(1);
 aelion.setName("Aelion");
 aelion.setAddress("95 Chemin de Gabardie")
@@ -16,7 +16,7 @@ aelion.setPostalCode("31200")
 aelion.setCity("Toulouse")
 
 //Create an instance/objet "CapGemin" of class CompanyModel as a new companyModel class with attributes set to...
-const capgem: CompanyModel = new CompanyModel();
+const capgem: CompanyModel = new CompanyModel(1);
 capgem.setId(2);
 capgem.setName("Cap Gemini");
 capgem.setAddress("109 Avenue du Général Eisenhower")

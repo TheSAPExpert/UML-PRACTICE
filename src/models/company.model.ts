@@ -7,6 +7,9 @@ export class CompanyModel {    // export in javascript allows it to be imported 
     private city: string;
 
     //#Methodes :
+    public constructor(id: number) {
+        this.id = id;
+    }
     public setId(value: number) {
         if (this.id === null) {
             this.id = value;
