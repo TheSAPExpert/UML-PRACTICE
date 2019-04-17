@@ -17,7 +17,7 @@ const companyRepository: CompanyRepository = new CompanyRepository();
 
 // Create an instance/objet "aelion" of class CompanyModel as a new companyModel class with attributes set to...
 const aelion: CompanyModel = new CompanyModel(1);//instance=objet dune classe
-aelion.setStrategy(new NameStrategy());
+aelion.setStrategy(new AllStrategy());
 aelion.setName("Aelion");
 aelion.setAddress("95 Chemin de Gabardie")
 aelion.setZipCode("31200")
