@@ -10,11 +10,18 @@ export class CompanyModel {    // export in javascript allows it to be imported 
     public constructor(id: number) {
         this.id = id;
     }
+
     public setId(value: number) {
-        if (this.id === null) {
+        if (this.id == null) {
             this.id = value;
         }
     }
+
+    public getId(): number {
+        return this.id;
+    }
+
+
     //Set the xxxx of the company to:...
     public setName(value: string) { //(value:......)=parametre/ set the name of the company
         this.name = value; //"#This. = reference de linstance courante de la classe"
