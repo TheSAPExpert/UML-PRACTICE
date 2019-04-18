@@ -61,7 +61,7 @@ export class CompanyModel {    // export in javascript allows it to be imported 
 
     //Format html
     public toString(howTo: number): string {
-        let output: string :
+        let output: string;
         if (howTo == 1) {
             output = '<div class ="col-12">';
             output += '<h2><i class="icon-office">&nbsp</i>' + this.name + '</h2>';
