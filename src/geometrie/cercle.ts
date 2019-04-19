@@ -2,6 +2,7 @@ import { dalleFactory } from "/Users/Benjamin/typescript-workspace/uml-practice/
 
 export class Cercle extends dalleFactory {
     private diametre: number = 200;
+    private whatKind: string;
 
     public constructor() {
         super(); //constructor explicite. Rappelle la classe parente car settypedalle est definit dans la classe parente. Obligatorire pour constructor de definir une classe parente
@@ -16,5 +17,9 @@ export class Cercle extends dalleFactory {
 
     public setDiametre(diametre: number): void {
         this.diametre = diametre;
+    }
+
+    public compareTo(object: Cercle): number {
+        return this.whatKind === object.whatKind ? 0 : -1; //operateur ternaire (3) si repoonse oui alors 0 else -1.
     }
 }

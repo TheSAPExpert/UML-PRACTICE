@@ -1,4 +1,7 @@
-export abstract class dalleFactory {
+import { Paintable } from "./paintable-interface";
+import { Comparable } from "./comparable-interface";
+
+export abstract class dalleFactory implements Paintable, Comparable<dalleFactory> {
     /**
      * @var string Libelle du type de dalle a produire
      */
@@ -12,5 +15,10 @@ export abstract class dalleFactory {
     public setTypeDalle(type: string) {
         this.typeDalle = type;
     }
+    public paint(color: string): void {
+        console.log('Peinture de ' + this.typeDalle + ' en ' + color);
+    }
+
+    public abstract compareTo(object: dalleFactory): number;
 
 }

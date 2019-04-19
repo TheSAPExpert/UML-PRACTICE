@@ -5,8 +5,14 @@ import { NameStrategy } from "./models/strategies/name-strategy";
 import { NameAndZipStrategy } from "./models/strategies/nameandzip-strategy";
 import { AllStrategy } from "./models/strategies/all-strategy";
 import { Carre } from "./geometrie/carre";
+import { Table } from "./geometrie/table";
 import { Cercle } from "./geometrie/cercle";
 import { Triangle } from "./geometrie/triangle";
+import { Paintable } from "./geometrie/paintable-interface";
+import { Car } from "./Usine/voiture";
+import { Moto } from './Usine/moto';
+import { Catalog } from '/Users/Benjamin/typescript-workspace/Ex_Fabrication voiture/src/Usine/catalog'
+import { CompanyController } from "./modules/company/company-controller";
 
 /**
  * @name main
@@ -84,3 +90,48 @@ const dalleTriangulaire: Triangle = new Triangle();
 dalleTriangulaire.whatkind('Equilateral');
 dalleTriangulaire.dessiner();
 
+//
+const laTable: Table = new Table(100, 100);
+
+//Maurice cest toi de jouer, je tenvoie le chariot avec les trucs a peindre
+const toCabine: Array<Paintable> = new Array<Paintable>();
+toCabine.push(grandCarre); //=append in python...
+toCabine.push(petitCarre);
+toCabine.push(jeSuisUnCercle);
+toCabine.push(dalleCirculaire75);
+toCabine.push(dalleTriangulaire);
+toCabine.push(laTable);
+
+//Vas-y Maurice.... lets paint it black
+toCabine.forEach((Object: any) => {
+    Object.paint('Black');
+});
+
+//Vehicule Factory
+//Create a catalog
+const catalogToday: Catalog = new Catalog();
+
+//FAB Car
+const BMW_535: Car = new Car('Serie 535');
+BMW_535.setManufacturer('BMW');
+BMW_535.setModel();
+BMW_535.setManufacturingCost(30000);
+BMW_535.setSalePrice();
+BMW_535.setProfitVehicule();
+catalogToday.add(BMW_535);
+
+//FAB Moto
+const KAWASAKI_N650: Moto = new Moto('Ninja 650');
+KAWASAKI_N650.setManufacturer('Kawasaki');
+KAWASAKI_N650.setModel();
+KAWASAKI_N650.setManufacturingCost(10000);
+KAWASAKI_N650.setSalePrice();
+KAWASAKI_N650.setProfitVehicule();
+catalogToday.add(KAWASAKI_N650);
+
+//TOTAL SALES/ PROFIT MARGIN
+console.log('Total Profit : ' + catalogToday.getTotalProfit() + 'euros.');
+console.log('Total Sales : ' + catalogToday.getTotalSales() + 'euros.');
+
+//Je suis content
+const companyForm: CompanyController = new CompanyController();

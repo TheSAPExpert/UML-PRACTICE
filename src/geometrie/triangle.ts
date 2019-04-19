@@ -17,4 +17,8 @@ export class Triangle extends dalleFactory {
         console.log('Je suis un : ' + this.typeDalle);
         console.log('De type ' + this.whatKind);
     }
+
+    public compareTo(object: Triangle): number {
+        return this.whatKind === object.whatKind ? 0 : -1; //operateur ternaire (3) si repoonse oui alors 0 else -1.
+    }
 }

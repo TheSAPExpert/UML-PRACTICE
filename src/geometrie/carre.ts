@@ -19,4 +19,7 @@ export class Carre extends dalleFactory {
     public setSideLength(side: number): void { //side = new lenght to be made
         this.sideLength = side;
     }
+    public compareTo(object: Carre): number {
+        return this.sideLength === object.sideLength ? 0 : -1; //operateur ternaire (3) si repoonse oui alors 0 else -1.
+    }
 }
