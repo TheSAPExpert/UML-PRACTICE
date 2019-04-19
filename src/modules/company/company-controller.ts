@@ -27,10 +27,33 @@ export class CompanyController extends Controller implements ControllerInterface
             '#company', //restreint aux elements qui portent lidentifiant company donc le formulaire
             (event: any): void => this._checkZipCode(event)
         );
+
+        Controller.app.on(
+            'click',
+            '#company',
+            (event: any) => this._getCity(event)
+        );
+    }
+
+    private _getCity(event: any): void {
+        const object: JQuery = $(event.target);
+        if (object.is('li')) {
+            //Est ce que la cible est une ligne de liste
+            const ville: string = object.html();
+            console.log('Ville selectionnee: ' + ville);
+
+            //const cityfield: JQuery = object.find('#company-city');
+            //==> Ne fonctionne pas car au moment du chargement des listeners le # nest pas charge
+            const cityField: JQuery = object.parent().parent().parent().next().children('input');
+            cityField.val(ville.toString());
+            //Supprimer la liste.. entierement shoot them all
+            object.parent().remove();
+
+        }
+
     }
 
     private _checkZipCode(event: any): void {
-
         const object: JQuery = $(event.target);
         //console.log('Détection de touche ' + object.attr('id'));
         let api: string = 'https://vicopo.selfbuild.fr/cherche/';
@@ -40,6 +63,7 @@ export class CompanyController extends Controller implements ControllerInterface
             if (object.val().toString().length === 5) {
                 // Call the API...
                 console.log('Call the API with : ' + object.val());
+                //call the api
                 $.ajax({
                     url: api + object.val(),
                     method: 'get',
@@ -57,14 +81,17 @@ export class CompanyController extends Controller implements ControllerInterface
                         cities.forEach((ville) => {
                             citiesListing.push(ville.city);
                         });
+                        console.log(JSON.stringify(liste));
 
                         //Maintenant on doit pouvoir envoyer la liste vers la page html. "=>"Function lambda
                         const docking: JQuery = object.next('div');
-                        const HtmlList: JQuery = $('<ul>');
+                        docking.children('ul').remove();
+                        const HtmlList: JQuery = $(('<ul>')).addClass('list-unstyled');
                         liste.forEach((ville) => {
                             let HtmlRow: JQuery = ($('<li>')).html(ville.toString());
                             HtmlList.append(HtmlRow);
-                        });
+                        })
+                        docking.append(HtmlList);
                     },
                     error: (xhr, error) => {
                         // NOOP
