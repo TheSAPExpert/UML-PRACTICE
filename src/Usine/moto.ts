@@ -1,4 +1,4 @@
-import { FabVehicules } from "/Users/Benjamin/typescript-workspace/Ex_Fabrication voiture/src/Usine/FabVehicules";
+import { FabVehicules } from "/Users/Benjamin/typescript-workspace/uml-practice/src/Usine/FabVehicules";
 
 export class Moto extends FabVehicules {
 

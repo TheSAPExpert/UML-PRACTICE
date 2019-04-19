@@ -11,7 +11,7 @@ import { Triangle } from "./geometrie/triangle";
 import { Paintable } from "./geometrie/paintable-interface";
 import { Car } from "./Usine/voiture";
 import { Moto } from './Usine/moto';
-import { Catalog } from '/Users/Benjamin/typescript-workspace/Ex_Fabrication voiture/src/Usine/catalog'
+import { Catalog } from '/Users/Benjamin/typescript-workspace/uml-practice/src/Usine/catalog'
 import { CompanyController } from "./modules/company/company-controller";
 
 /**

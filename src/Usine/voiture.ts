@@ -1,5 +1,5 @@
-import { FabVehicules } from "/Users/Benjamin/typescript-workspace/Ex_Fabrication voiture/src/Usine/FabVehicules";
-import { Catalog } from '/Users/Benjamin/typescript-workspace/Ex_Fabrication voiture/src/Usine/catalog'
+import { FabVehicules } from "/Users/Benjamin/typescript-workspace/uml-practice/src/Usine/FabVehicules";
+import { Catalog } from '/Users/Benjamin/typescript-workspace/uml-practice/src/Usine/catalog'
 export class Car extends FabVehicules {
 
     public constructor(id: string) {
